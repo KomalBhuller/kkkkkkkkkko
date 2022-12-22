@@ -1,0 +1,489 @@
+{
+	"info": {
+		"_postman_id": "0f21d447-c4e4-4369-ada1-5e5459ee54d2",
+		"name": "Carts API",
+		"description": "The Carts web service provides a RESTful API for adding, changing, and deleting shopping carts. The [Web UI](../../web-ui) makes calls to this service as a user adds and removes products to their cart and during checkout.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25031260"
+	},
+	"item": [
+		{
+			"name": "carts",
+			"item": [
+				{
+					"name": "{cart Id}",
+					"item": [
+						{
+							"name": "/carts/:cartId",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "appllication/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/carts/:cartId",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"carts",
+										":cartId"
+									],
+									"variable": [
+										{
+											"key": "cartId",
+											"value": "1",
+											"description": "(Required) "
+										},
+										{
+											"key": "host",
+											"value": "{{host}}"
+										},
+										{
+											"key": "port",
+											"value": "{{port}}",
+											"description": "Use the port from ../docker-compose.yml"
+										}
+									]
+								},
+								"description": "Return information of the specified cart"
+							},
+							"response": [
+								{
+									"name": "Successful",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/carts/:cartId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"carts",
+												":cartId"
+											],
+											"variable": [
+												{
+													"key": "cartId",
+													"value": "1",
+													"description": "(Required) "
+												},
+												{
+													"key": "host",
+													"value": "{{host}}"
+												},
+												{
+													"key": "port",
+													"value": "{{port}}",
+													"description": "Use the port from ../docker-compose.yml"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "appllication/json"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "/carts/:cartId",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "appllication/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": \"1\",\n  \"username\": \"user1344\",\n  \"items\": [\n    {\n      \"product_id\": \"a31ad4b3-f9a8-4a9b-a8b3-3034af7bacec\",\n      \"product_name\": \"Kiwi\",\n      \"quantity\": 1,\n      \"price\": 3.99\n    },\n    {\n      \"product_id\": \"a31ad4b3-f9a8-4a9b-a8b3-3034af7bacec\",\n      \"product_name\": \"Kiwi\",\n      \"quantity\": 1,\n      \"price\": 3.99\n    }\n  ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/carts/:cartId",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"carts",
+										":cartId"
+									],
+									"variable": [
+										{
+											"key": "cartId",
+											"value": "1",
+											"description": "(Required) "
+										},
+										{
+											"key": "host",
+											"value": "{{host}}"
+										},
+										{
+											"key": "port",
+											"value": "{{port}}",
+											"description": "Use the port from ../docker-compose.yml"
+										}
+									]
+								},
+								"description": "Update the specified cart"
+							},
+							"response": [
+								{
+									"name": "Successful",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"id\": \"1\",\n  \"username\": \"user1344\",\n  \"items\": [\n    {\n      \"product_id\": \"a31ad4b3-f9a8-4a9b-a8b3-3034af7bacec\",\n      \"product_name\": \"Kiwi\",\n      \"quantity\": 1,\n      \"price\": 3.99\n    },\n    {\n      \"product_id\": \"a31ad4b3-f9a8-4a9b-a8b3-3034af7bacec\",\n      \"product_name\": \"Kiwi\",\n      \"quantity\": 1,\n      \"price\": 3.99\n    }\n  ]\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/carts/:cartId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"carts",
+												":cartId"
+											],
+											"variable": [
+												{
+													"key": "cartId",
+													"value": "1",
+													"description": "(Required) "
+												},
+												{
+													"key": "host",
+													"value": "{{host}}"
+												},
+												{
+													"key": "port",
+													"value": "{{port}}",
+													"description": "Use the port from ../docker-compose.yml"
+												}
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "appllication/json"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "/carts",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "appllication/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/carts",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"carts"
+							],
+							"variable": [
+								{
+									"key": "host",
+									"value": "{{host}}"
+								},
+								{
+									"key": "port",
+									"value": "{{port}}",
+									"description": "Use the port from ../docker-compose.yml"
+								}
+							]
+						},
+						"description": "Return an array of carts of all users"
+					},
+					"response": [
+						{
+							"name": "Successful",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/carts",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"carts"
+									],
+									"variable": [
+										{
+											"key": "host",
+											"value": "{{host}}"
+										},
+										{
+											"key": "port",
+											"value": "{{port}}",
+											"description": "Use the port from ../docker-compose.yml"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "appllication/json"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "/carts",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "appllication/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"username\": \"mollit\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/carts",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"carts"
+							],
+							"variable": [
+								{
+									"key": "host",
+									"value": "{{host}}"
+								},
+								{
+									"key": "port",
+									"value": "{{port}}",
+									"description": "Use the port from ../docker-compose.yml"
+								}
+							]
+						},
+						"description": "Place an order"
+					},
+					"response": [
+						{
+							"name": "Successful",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"username\": \"mollit\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/carts",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"carts"
+									],
+									"variable": [
+										{
+											"key": "host",
+											"value": "{{host}}"
+										},
+										{
+											"key": "port",
+											"value": "{{port}}",
+											"description": "Use the port from ../docker-compose.yml"
+										}
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "appllication/json"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "/sign",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"webCheckoutDetails\": {\n    \"checkoutReviewReturnUrl\": \"https://developer.amazon.com/docs/amazon-pay-checkout/introduction.html\"\n  },\n  \"storeId\": \"ad fugiat quis cillum\",\n  \"chargePermissionType\": \"chargePermissionType\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/sign",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"sign"
+					],
+					"variable": [
+						{
+							"key": "host",
+							"value": "{{host}}"
+						},
+						{
+							"key": "port",
+							"value": "{{port}}",
+							"description": "Use the port from ../docker-compose.yml"
+						}
+					]
+				},
+				"description": "Sign a payload for Amazon Pay"
+			},
+			"response": [
+				{
+					"name": "Successful",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"webCheckoutDetails\": {\n    \"checkoutReviewReturnUrl\": \"https://developer.amazon.com/docs/amazon-pay-checkout/introduction.html\"\n  },\n  \"storeId\": \"ad fugiat quis cillum\",\n  \"chargePermissionType\": \"chargePermissionType\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/sign",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"sign"
+							],
+							"variable": [
+								{
+									"key": "host",
+									"value": "{{host}}"
+								},
+								{
+									"key": "port",
+									"value": "{{port}}",
+									"description": "Use the port from ../docker-compose.yml"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "text",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain"
+						}
+					],
+					"cookie": [],
+					"body": ""
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "host",
+			"value": "localhost",
+			"type": "any"
+		},
+		{
+			"key": "port",
+			"value": "8003",
+			"type": "any"
+		},
+		{
+			"key": "baseUrl",
+			"value": "http://{{host}}:{{port}}",
+			"type": "string"
+		}
+	]
+}
